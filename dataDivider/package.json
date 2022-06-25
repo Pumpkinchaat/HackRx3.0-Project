@@ -1,0 +1,11 @@
+{
+  "name": "datadivider",
+  "version": "1.0.0",
+  "description": "This will divide data for the sentimental engine",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Team Sumo",
+  "license": "ISC"
+}
