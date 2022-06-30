@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>MedReviews</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;700&display=swap" rel="stylesheet">
+  <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v2.8.1/mapbox-gl.js'></script>
+  <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v2.8.1/mapbox-gl.css' rel='stylesheet' />
+  <nav class="navbar navbar-expand">
+    <div class="container">
+      <a class="navbar-brand">MedReviews</a>
+      <div class="collapse navbar-collapse">
+        <form class="form-inline m-auto" >
+          <input class="form-control  mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="location">
+          <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search Address</button>
+        </form>
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item"><button type="button" class="btn btn-outline-light m-1" data-toggle="modal" data-target="#exampleModal1" data-whatever="Sign In">Sign In</button></li>
+          <li class="nav-item"><button type="button" class="btn btn-outline-light m-1" data-toggle="modal" data-target="#exampleModal1" data-whatever="Sign Up">Sign Up</button></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="modal fade" id="exampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div style="border-bottom: none;"class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Create Institution</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+              <label for="Username" class="col-form-label username">Username</label>
+              <input type="text" class="form-control" id="recipient-Username">
+            </div>
+            <div class="form-group">
+              <label for="Password" class="col-form-label password">Password</label>
+              <input type="password" class="form-control" id="recipient-paasword">
+            </div>
+          </form>
+        </div>
+        <div style="border-top: none; justify-content: center;"class="modal-footer">
+          <button type="button" class="btn btn-block Save_button">Submit</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</head>
+
+<body>
+  <div class="container">

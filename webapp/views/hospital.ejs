@@ -1,0 +1,93 @@
+<%- include("header"); -%>
+<div class="col-12">
+  <section class="cards">
+    <div class="card">
+      <div class="card-body">
+        <a href=<%= `/${institution._id}` %> >
+          <h3><%= institution.name %></h3>
+        </a>
+        <div class="d-flex justify-content-between">
+          <p>address: <%= institution.address %></p>
+          <p>Rating: <%= finalRating %> </p>
+        </div>
+      </div>
+      <div class="d-flex justify-content-between">
+        <p class="ml-2 mt-2">Reviews:</p>
+        <button
+          type="button"
+          class="btn btn-outline-light btn-sm m-2"
+          data-toggle="modal"
+          data-target="#exampleModal2"
+          data-whatever="Create review"
+        >
+          Create Review
+        </button>
+      </div>
+      <% for (let i = 0 ; i < institution.review.length ; i++) { %>
+      <div class="card">
+        <div style="background-color: white; color: black" class="card-body">
+          <span style="font-weight: bold">By: <%= institution.review[i].reviewerName %> </span><span class="ml-2">Rating: <%= institution.review[i].rating %> </span
+          ><span class="ml-2"><b>Platform:</b> <%= institution.review[i].domain %> </span>
+          <p><%= institution.review[i].reviewText %></p>
+        </div>
+      </div>
+      <% } %>  
+    </div>
+  </section>
+</div>
+<div style="width: 98%" class="col-12 maps">
+  <p></p>
+  <div id="map"></div>
+</div>
+<div
+  class="modal fade"
+  id="exampleModal2"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div style="border-bottom: none" class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Create Review</h5>
+        <button
+          type="button"
+          class="close"
+          data-dismiss="modal"
+          aria-label="Close"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form action="<%= institution._id %>/review" method="post">
+          <div class="form-group">
+            <label for="recipient-name" class="col-form-label">Name</label>
+            <input type="text" class="form-control" name="reviewerName" id="recipient-name" />
+          </div>
+          <div class="form-group">
+            <label for="review" class="col-form-label">Review</label>
+            <textarea class="form-control" name="reviewText" id="message-text"></textarea>
+          </div>
+          <div class="form-group">
+            <label for="rating" class="col-form-label Rating"
+              >Rating(out of 5)</label
+            >
+            <input min="0.0" step="0.1" type="number" class="form-control" name="rating" id="rating" />
+          </div>
+          <button type="submit" class="btn btn-block Save_button h mt-3">
+            Submit
+          </button>
+        </form>
+      </div>
+      <div
+        style="border-top: none; justify-content: center"
+        class="modal-footer"
+      >
+      </div>
+    </div>
+  </div>
+</div>
+
+<%- include("footer"); -%>
