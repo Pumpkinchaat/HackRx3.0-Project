@@ -1,6 +1,6 @@
 # MEDReviews
 
-MedReviews is a one-stop medical knowledge solution. More than 8 top websites power our medical knowledge, and our knowledge / data-gathering processes are completely autonomous.
+MedReviews is a one-stop medical knowledge solution. More than 8 top websites power our medical knowledge, and our knowledge / data-gathering processes are completely autonomous. Made by Vinajmuri Manojna and Susmit Singh.
 
 
 ## Folder Definition
@@ -52,4 +52,4 @@ node app.js
 ## WARNING 🔥🔥🔥
 This code is still developmental and some things might be broken.
 
-Made with ❤️ by Team Sumo
+Made with ❤️ by Team Sumo (Vinjamuri Manojna & Susmit Singh)
